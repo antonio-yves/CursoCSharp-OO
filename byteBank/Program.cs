@@ -1,4 +1,5 @@
 ﻿using System;
+using byteBank;
 
 class Program
 {
@@ -6,16 +7,18 @@ class Program
     {
         Console.WriteLine("Bem vindx ao byteBank!");
 
-        string NomeTitular = "João Gomes";
-        string Conta = "1234-x";
-        int Agencia = 23;
-        string NomeAgencia = "Agência Central";
-        double Saldo = 93.50;
+        ContaCorrente contaCorrente = new ContaCorrente();
 
-        Console.WriteLine("\nNome do Titular: " + NomeTitular);
-        Console.WriteLine("Agência: " + Agencia);
-        Console.WriteLine("Conta: " + Conta);
-        Console.WriteLine("Nome da Agência: " + NomeAgencia);
-        Console.WriteLine("Saldo: R$ " + Saldo);
+        contaCorrente.Titular = "João Gomes";
+        contaCorrente.Conta = "1234-x";
+        contaCorrente.Agencia = 23;
+        contaCorrente.NomeAgencia = "Agência Central";
+        contaCorrente.Saldo = 93.50;
+
+        Console.WriteLine("\nNome do Titular: " + contaCorrente.Titular);
+        Console.WriteLine("Agência: " + contaCorrente.Agencia);
+        Console.WriteLine("Conta: " + contaCorrente.Conta);
+        Console.WriteLine("Nome da Agência: " + contaCorrente.NomeAgencia);
+        Console.WriteLine("Saldo: R$ " + contaCorrente.Saldo);
     }
 }
