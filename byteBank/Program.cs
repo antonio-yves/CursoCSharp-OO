@@ -1,10 +1,13 @@
-﻿using System;
+﻿using System.Windows;
 using byteBank;
 
 class Program
 {
     static void Main(string[] agrs)
     {
+        Console.BackgroundColor = ConsoleColor.Magenta;
+        Console.Clear();
+
         Console.WriteLine("Bem vindx ao byteBank!");
 
         ContaCorrente contaCorrente = new ContaCorrente();

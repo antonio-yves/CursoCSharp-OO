@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "byteBank", "byteBank\byteBank.csproj", "{0AB10917-8E5F-45DF-9371-385BFE58F97C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "byteBank", "byteBank\byteBank.csproj", "{0AB10917-8E5F-45DF-9371-385BFE58F97C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "byteBank_Administracao", "byteBank_Administracao\byteBank_Administracao.csproj", "{C4771787-F16B-47C9-B81D-FD8E95954476}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0AB10917-8E5F-45DF-9371-385BFE58F97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AB10917-8E5F-45DF-9371-385BFE58F97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AB10917-8E5F-45DF-9371-385BFE58F97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4771787-F16B-47C9-B81D-FD8E95954476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4771787-F16B-47C9-B81D-FD8E95954476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4771787-F16B-47C9-B81D-FD8E95954476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4771787-F16B-47C9-B81D-FD8E95954476}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

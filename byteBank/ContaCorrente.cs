@@ -1,22 +1,44 @@
-﻿namespace byteBank
+﻿using byteBank.Titular;
+
+namespace byteBank
 {
     public class ContaCorrente
     {
-        public string Titular;
-        public string Conta;
-        public int Agencia;
-        public string NomeAgencia;
-        public double Saldo;
+        private Cliente _titular;
+        private string _conta;
+        private int _agencia;
+        private string _nomeAgencia;
+        private double _saldo;
+
+        public double Saldo
+        {
+            get 
+            { 
+                return _saldo; 
+            }
+
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+                else
+                {
+                    _saldo = value;
+                }
+            }
+        }
 
         public bool Sacar(double valor)
         {
-            if ((Saldo < valor) || (valor < 0))
+            if ((_saldo < valor) || (valor < 0))
             {
                 return false;
             }
             else
             {
-                Saldo -= valor;
+                _saldo -= valor;
                 return true;
             }
         }
@@ -25,31 +47,31 @@
         {
             if (valor > 0)
             {
-                Saldo += valor;
+                _saldo += valor;
             }
         }
 
         public bool Transferir(double valor, ContaCorrente destino)
         {
-            if ((Saldo < valor) || (valor < 0))
+            if ((_saldo < valor) || (valor < 0))
             {
                 return false;
             }
             else
             {
-                Saldo -= valor;
-                destino.Saldo += valor;
+                _saldo -= valor;
+                destino._saldo += valor;
                 return true;
             }
         }
 
         public void ExibirDadosDaConta()
         {
-            Console.WriteLine("Titular: " + Titular);
-            Console.WriteLine("Agência: " + Agencia);
-            Console.WriteLine("Conta: " + Conta);
-            Console.WriteLine("Nome da Agência: " + NomeAgencia);
-            Console.WriteLine("Saldo: R$ " + Saldo);
+            Console.WriteLine("Titular: " + _titular.Nome);
+            Console.WriteLine("Agência: " + _agencia);
+            Console.WriteLine("Conta: " + _conta);
+            Console.WriteLine("Nome da Agência: " + _nomeAgencia);
+            Console.WriteLine("Saldo: R$ " + _saldo);
         }
     }
 }
